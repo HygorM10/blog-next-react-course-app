@@ -1,5 +1,10 @@
-import Image from "next/image";
+import { SpinLoader } from '@/components/SpinLoader';
+import clsx from 'clsx';
 
 export default function HomePage() {
-  return <h1>Olá de dentro de page.tsx</h1>;
+  return (
+    <div>
+      <SpinLoader containerClasses='min-h-40' />
+    </div>
+  );
 }
