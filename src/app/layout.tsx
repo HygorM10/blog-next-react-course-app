@@ -1,10 +1,10 @@
-import "./globals.css";
+import './globals.css';
 
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Blog do Hygor",
-  description: "Essa é a descrição do meu blog",
+  title: 'Blog do Hygor',
+  description: 'Essa é a descrição do meu blog',
 };
 
 export default function RootLayout({
@@ -13,10 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body>
-        {children}
-      </body>
+    <html lang='pt-BR'>
+      <body>{children}</body>
     </html>
   );
 }
