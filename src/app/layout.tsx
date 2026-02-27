@@ -1,6 +1,7 @@
 import './globals.css';
 
 import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import type { Metadata } from 'next';
 
@@ -12,18 +13,19 @@ export const metadata: Metadata = {
   description: 'Essa é a descrição do meu blog',
 };
 
-export default function RootLayout() {
+type RootLayoutProps = {
+  children: React.ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='pt-BR'>
       <body>
         <Container>
           <Header />
+          {children}
+          <Footer />
         </Container>
-        <footer>
-          <h1 className='text-6xl font-bold text-center py-8'>
-            Aqui é o footer
-          </h1>
-        </footer>
       </body>
     </html>
   );
